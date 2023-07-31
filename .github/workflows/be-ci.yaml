@@ -23,13 +23,15 @@ jobs:
           docker run -i --rm -v $(pwd):/app/source -v $(pwd)/.prettierrc:/app/.prettierrc hocptit/eslint-ci:0.0.1 "."
           echo "Lint done."
   
-    run-unit-test:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v3
-        - name: Run unit test
-          run: |
-            echo "Start run...."
-            echo "Install tool..." #Install tool if github action is not built-in
-            echo "Run done."
+  run-unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run unit test
+        run: |
+          echo "Start run...."
+          echo "Install tool..." #Install tool if github action is not built-in
+          npm install jest
+          npx jest
+          echo "Run done."
