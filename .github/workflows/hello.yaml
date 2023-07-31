@@ -8,13 +8,13 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Step setup node version 14
+      - name: _Step_ setup node version 14
         uses: actions/setup-node@v2
         with:
           node-version: 14
-      - name: Before checkout
+      - name: _Before_ checkout
         run: ls
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Step check node version
+      - name: _Step_ check node version
         run: ls
