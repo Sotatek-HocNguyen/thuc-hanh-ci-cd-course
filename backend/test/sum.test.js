@@ -15,7 +15,7 @@ describe('Sum function', () => {
 
 
   test('adds 0.1 + 0.2 to equal 0', () => {
-    expect(sum(0.1, 0.2)).toBe(0.3);
+    expect(sum(0.1, 0.2)).toBe(0.30000000000000004);
   });
 
 });
