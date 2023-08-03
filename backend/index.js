@@ -34,7 +34,7 @@ app.get('/api/article', async (req, res) => {
 });
 
 app.get('/', async (req, res) => {
-  res.json({mesage: "Hello"});
+  res.json({mesage: "Hello New"});
 });
 
 app.post('/api/article', async (req, res) => {
