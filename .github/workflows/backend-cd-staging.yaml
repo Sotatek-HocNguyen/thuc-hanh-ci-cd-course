@@ -1,11 +1,11 @@
-name: BE deploy staging
-run-name: BE deploy staging
+name: BE deploy staging branch
+run-name: BE deploy staging branch
 on:
   push:
     branches:
       - 'staging'
-  paths:
-  - backend/**
+    paths:
+    - backend/**
 defaults:
   run:
     working-directory: ./backend
